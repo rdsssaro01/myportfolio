@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
                             </span>
                         </h1>
                         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-700">
-                            Flutter Full Stack Developer
+                            Full Stack Developer
                         </h2>
                     </div>
 

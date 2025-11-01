@@ -15,6 +15,7 @@ const Experience: React.FC = () => {
             'Implemented database solutions using Entity Framework, Mongoose, SQLite, and ObjectBox',
             'Developed healthcare solutions with secure authentication and appointment management systems',
             'Worked with OAuth2, JWT, and Microsoft Authentication for robust security flows',
+            'Deployed frontend and backend APIs using IIS Manager, ensuring reliable hosting, performance optimization, and seamless integration',
             'Collaborated in Agile environment, delivering high-quality features with cross-functional teams',
         ],
     };

@@ -7,7 +7,7 @@ const About: React.FC = () => {
             title: 'Frontend Development',
             icon: Code,
             color: 'from-blue-500 to-cyan-500',
-            skills: ['Flutter', 'React.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
+            skills: ['Flutter', 'React.js', 'Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Figma'],
         },
         {
             title: 'Backend Development',
@@ -19,7 +19,7 @@ const About: React.FC = () => {
             title: 'Mobile & Desktop',
             icon: Smartphone,
             color: 'from-blue-600 to-cyan-600',
-            skills: ['Flutter (Android/iOS)', 'Flutter Desktop', 'GetX', 'Riverpod', 'Redux'],
+            skills: ['Flutter (Android/iOS)', 'Flutter Desktop', 'GetX', 'Riverpod', 'Redux', 'Riverpod', 'Bloc'],
         },
         {
             title: 'Database',
@@ -31,7 +31,7 @@ const About: React.FC = () => {
             title: 'Tools & DevOps',
             icon: GitBranch,
             color: 'from-blue-500 to-cyan-500',
-            skills: ['Git', 'GitHub', 'Azure', 'Docker', 'CI/CD', 'Postman', 'Swagger'],
+            skills: ['Git', 'GitHub', 'Azure', 'Docker', 'CI/CD', 'Postman', 'Swagger', 'IIs Manager'],
         },
         {
             title: 'Integrations',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Ship, Car, Heart, Radio, Briefcase, Calendar, ExternalLink } from 'lucide-react';
+import { Ship, Car, Heart, Radio, Briefcase, Calendar } from 'lucide-react';
 
 const Projects: React.FC = () => {
     const projects = [
@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
                 'Automated checklist management',
                 'Cloud synchronization',
             ],
-            tech: ['Flutter', 'GetX', 'SQLite', 'Node.js'],
+            tech: ['Flutter', 'GetX', 'SQLite', 'Node.js', 'sql Server', 'StoreProcedures'],
             platforms: ['Android', 'iOS', 'Desktop'],
         },
         {
@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
                 'Razorpay payment integration',
                 'Google Maps API integration',
             ],
-            tech: ['Flutter', 'Dart', 'Figma', 'Razorpay', 'Google Maps API'],
+            tech: ['Flutter', 'Dart', 'Figma', 'Razorpay', 'Google Maps API', 'Provider'],
             platforms: ['Android', 'iOS'],
         },
         {
@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
                 'Real-time carrier tracking',
                 'Secure payment processing',
             ],
-            tech: ['Flutter', 'GetX', '.NET Web API', 'Razorpay', 'Figma'],
+            tech: ['Flutter', 'Figma', 'GetX', 'Riverpod', '.NET Web API', 'Razorpay', 'Sql Server', 'Google Maps API', 'StoreProcedures'],
             platforms: ['Android', 'iOS'],
         },
         {
@@ -62,7 +62,7 @@ const Projects: React.FC = () => {
                 'REST API with Azure deployment',
                 'ObjectBox local database',
             ],
-            tech: ['Flutter', 'ObjectBox', 'Node.js', 'MySQL', 'Azure'],
+            tech: ['Flutter', 'BLoc(Cubit)', 'ObjectBox', 'Node.js', 'MySQL', 'Figma', 'RESTful APIs', 'Google Maps API'],
             platforms: ['Android', 'iOS'],
         },
         {
@@ -78,7 +78,7 @@ const Projects: React.FC = () => {
                 'Reporting and analytics',
                 'Google Maps integration',
             ],
-            tech: ['Flutter', 'GetX', 'Hive', 'Google Maps API'],
+            tech: ['Flutter', 'GetX', 'Provider', 'Hive', 'Google Maps API'],
             platforms: ['Android', 'iOS'],
         },
     ];

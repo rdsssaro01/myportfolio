@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Send, FileUser } from 'lucide-react';
 
 const Contact: React.FC = () => {
     const contactInfo = [
@@ -30,17 +30,26 @@ const Contact: React.FC = () => {
         {
             icon: Linkedin,
             label: 'LinkedIn',
-            href: 'https://www.linkedin.com/in/saravanan-r-1a1a1a1a1/',
+            href: 'https://www.linkedin.com/in/saravananr007/',
             color: 'hover:text-blue-600',
             bgColor: 'hover:bg-blue-50',
         },
         {
             icon: Github,
             label: 'GitHub',
-            href: 'https://github.com/saravananraj',
+            href: 'https://github.com/rdsssaro01?tab=repositories',
             color: 'hover:text-slate-900',
             bgColor: 'hover:bg-slate-100',
         },
+
+
+        {
+            icon: FileUser,
+            label: 'Resume',
+            href: './Saravanan R Flutter.pdf',
+            color: 'hover:text-slate-900',
+            bgColor: 'hover:bg-slate-100',
+        }
     ];
 
     return (
