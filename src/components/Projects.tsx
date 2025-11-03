@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
                 'Automated checklist management',
                 'Cloud synchronization',
             ],
-            tech: ['Flutter', 'GetX', 'SQLite', 'Node.js', 'sql Server', 'StoreProcedures'],
+            tech: ['Flutter', 'React', 'GetX', 'SQLite', 'Node.js', 'sql Server', 'StoreProcedures'],
             platforms: ['Android', 'iOS', 'Desktop'],
         },
         {
@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
             period: 'Apr 2024 - Jan 2025',
             icon: Heart,
             color: 'from-blue-600 to-cyan-600',
-            description: 'Comprehensive healthcare ecosystem for doctors, patients, and logistics',
+            description: 'A unified digital healthcare ecosystem connecting patients, doctors, and logistics for seamless care delivery ',
             highlights: [
                 'Doctor booking and appointment management',
                 'Report validation and downloads',
@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
                 'Real-time carrier tracking',
                 'Secure payment processing',
             ],
-            tech: ['Flutter', 'Figma', 'GetX', 'Riverpod', '.NET Web API', 'Razorpay', 'Sql Server', 'Google Maps API', 'StoreProcedures'],
+            tech: ['Flutter', 'Angular', 'Figma', 'GetX', 'Riverpod', '.NET Web API', 'Razorpay', 'Sql Server', 'Google Maps API', 'StoreProcedures'],
             platforms: ['Android', 'iOS'],
         },
         {
