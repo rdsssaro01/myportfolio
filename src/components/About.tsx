@@ -7,7 +7,7 @@ const About: React.FC = () => {
             title: 'Frontend Development',
             icon: Code,
             color: 'from-blue-500 to-cyan-500',
-            skills: ['Flutter', 'React.js', 'Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Figma'],
+            skills: ['Flutter', 'React.js', 'Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap','Next.js'],
         },
         {
             title: 'Backend Development',
@@ -31,7 +31,7 @@ const About: React.FC = () => {
             title: 'Tools & DevOps',
             icon: GitBranch,
             color: 'from-blue-500 to-cyan-500',
-            skills: ['Git', 'GitHub', 'Azure', 'Docker', 'CI/CD', 'Postman', 'Swagger', 'IIs Manager'],
+            skills: ['Git', 'GitHub', 'Azure', 'Docker', 'CI/CD', 'Postman', 'Swagger', 'IIs Manager','Figma'],
         },
         {
             title: 'Integrations',
@@ -51,7 +51,7 @@ const About: React.FC = () => {
 
                 <div className="max-w-4xl mx-auto mb-16">
                     <p className="text-lg text-slate-600 leading-relaxed text-center">
-                        As a Flutter Full Stack Developer with over 2 years of hands-on experience, I specialize in
+                        As a Flutter Full Stack Developer with around 3 years of hands-on experience, I specialize in
                         building cross-platform applications for Android, iOS, Desktop, and Web. I focus on creating
                         scalable, high-performance solutions with exceptional user experiences. My expertise spans
                         from mobile development to backend API creation, enabling me to deliver complete end-to-end

@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
                     </div>
 
                     <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                        Building high-performance cross-platform applications with 2+ years of expertise in
+                        Building high-performance cross-platform applications with  around 3 years of expertise in
                         Flutter, React.js, Node.js, and .NET. Specialized in creating seamless mobile, web,
                         and desktop experiences with modern architecture.
                     </p>
