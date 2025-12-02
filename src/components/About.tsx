@@ -7,7 +7,7 @@ const About: React.FC = () => {
             title: 'Frontend Development',
             icon: Code,
             color: 'from-blue-500 to-cyan-500',
-            skills: ['Flutter', 'React.js', 'Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap','Next.js'],
+            skills: ['Flutter', 'React.js', 'Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap','Next.j'],
         },
         {
             title: 'Backend Development',
