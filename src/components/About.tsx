@@ -91,7 +91,7 @@ const About: React.FC = () => {
                 <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div className="text-center">
                         <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">
-                            2+ Years
+                            3 Years
                         </div>
                         <div className="text-slate-600 font-medium">Experience</div>
                     </div>
