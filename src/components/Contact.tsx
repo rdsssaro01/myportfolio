@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
         {
             icon: FileUser,
             label: 'Resume',
-            href: './Saravanan R Flutter.pdf',
+            href: './Saravanan R Full Stack Developer.pdf',
             color: 'hover:text-slate-900',
             bgColor: 'hover:bg-slate-100',
         }
