@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
                             </span>
                         </h1>
                         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-700">
-                            Full Stack Developer
+                            Cross Platform Full Stack Developer
                         </h2>
                     </div>
 
@@ -37,8 +37,8 @@ const Hero: React.FC = () => {
 
                     <div className="flex flex-wrap justify-center gap-4 pt-4">
                         <div className="flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow">
-                            <Smartphone className="w-5 h-5 text-blue-600" />
-                            <span className="font-medium text-slate-700">Mobile Development</span>
+                            <Code2 className="w-5 h-5 text-cyan-600" />
+                            <span className="font-medium text-slate-700">Cross-Platform</span>
                         </div>
                         <div className="flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow">
                             <Globe className="w-5 h-5 text-cyan-600" />
@@ -48,10 +48,7 @@ const Hero: React.FC = () => {
                             <Database className="w-5 h-5 text-blue-600" />
                             <span className="font-medium text-slate-700">Backend APIs</span>
                         </div>
-                        <div className="flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow">
-                            <Code2 className="w-5 h-5 text-cyan-600" />
-                            <span className="font-medium text-slate-700">Cross-Platform</span>
-                        </div>
+
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-4 pt-8">
