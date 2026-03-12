@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Database, Smartphone, Globe, ChevronDown } from 'lucide-react';
+import { Code2, Database, Globe, ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
     const scrollToAbout = () => {

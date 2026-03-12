@@ -5,7 +5,7 @@ const Experience: React.FC = () => {
     const experience = {
         company: 'ClazyWorks Pvt. Ltd.',
         role: 'Software Engineer',
-        period: '2025 - Current',
+        period: '2023 - Current',
         location: 'Chennai, TamilNadu',
         responsibilities: [
             'Developed and maintained cross-platform applications using Flutter and React.js for Android, iOS, Desktop, and Web',
@@ -24,7 +24,7 @@ const Experience: React.FC = () => {
         <section id="experience" className="py-24 bg-slate-50 relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-1/2 -left-40 w-96 h-96 bg-blue-100/50 rounded-full blur-[120px] -z-10"></div>
-            
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center space-y-4 mb-20 animate-fade-in">
                     <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">Work Experience</h2>
