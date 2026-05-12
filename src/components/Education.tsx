@@ -1,165 +1,109 @@
 import React from 'react';
-import { GraduationCap, Award, BookOpen, MapPin, Calendar } from 'lucide-react';
+import { GraduationCap, Award, BookOpen, MapPin, Star } from 'lucide-react';
 
 const Education: React.FC = () => {
     const education = [
         {
-            degree: 'Bachelor of Engineering',
-            field: 'Computer Science and Engineering',
+            degree: 'Bachelor of Computer Science And Engineering (B.E.CSE)',
             institution: 'Sudharsan Engineering College',
-            location: 'Sathiyamangalam, Pudukkottai, Trichy, Tamil Nadu',
+            location: 'Pudukkottai, Tamil Nadu',
             period: '2019 - 2023',
             grade: '8.0 CGPA',
-            icon: GraduationCap,
-        },
-        {
-            degree: 'Higher Secondary Certificate (HSC)',
-            field: 'Science',
-            institution: 'Govt Higher Secondary School',
-            location: 'Pudukkottai, Tamil Nadu',
-            period: '2018 - 2019',
-            grade: '73%',
-            icon: BookOpen,
-        },
+            highlights: ['Data Structures', 'Database Management', 'Cloud Computing']
+        }
     ];
 
     const certifications = [
-        {
-            title: 'Flutter Development',
-            platform: 'Udemy',
-            description: 'Comprehensive Flutter app development course',
-        },
-        {
-            title: 'React.js',
-            platform: 'Udemy',
-            description: 'Modern React.js web development',
-        },
-        {
-            title: 'Node.js',
-            platform: 'Udemy',
-            description: 'Backend development with Node.js',
-        },
-        {
-            title: 'SQL',
-            platform: 'Udemy',
-            description: 'Database design and management',
-        },
-    ];
-
-    const interests = [
-        'Web Development',
-        'App Development',
-        'Full Stack Development',
-        'Machine Learning',
-        'Agile Methodology',
+        { title: 'React js & Node js', platform: 'Udemy' },
+        { title: 'SQL Specialist', platform: 'Udemy' },
+        { title: 'Flutter App Development', platform: 'Udemy' }
     ];
 
     return (
-        <section id="education" className="py-20 bg-gradient-to-br from-slate-50 to-white">
+        <section id="education" className="py-32 bg-surface-primary dot-grid">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center space-y-4 mb-16">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">Education & Certifications</h2>
-                    <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full"></div>
+                <div className="flex flex-col items-center text-center mb-24 space-y-4">
+                    <h2 className="text-4xl sm:text-6xl font-black text-white">Academic Roots</h2>
+                    <div className="section-line"></div>
+                    <p className="text-slate-400 max-w-2xl text-lg font-medium">
+                        Foundational knowledge in <span className="text-white">Computer Science</span> and continuous professional <span className="text-white">Certifications</span>.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                    {education.map((edu, index) => {
-                        const Icon = edu.icon;
-                        return (
-                            <div
-                                key={index}
-                                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 overflow-hidden hover:-translate-y-1"
-                            >
-                                <div className="h-2 bg-gradient-to-r from-blue-600 to-cyan-600"></div>
-                                <div className="p-8">
-                                    <div className="flex items-start gap-4 mb-4">
-                                        <div className="p-4 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl shadow-lg">
-                                            <Icon className="w-8 h-8 text-white" />
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    {/* Education Card */}
+                    <div className="lg:col-span-2 space-y-6">
+                        {education.map((edu, i) => (
+                            <div key={i} className="glass-card p-10 group relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-accent-indigo/5 blur-3xl rounded-full"></div>
+                                
+                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+                                    <div className="flex items-center gap-6">
+                                        <div className="p-5 glass rounded-[2rem] bg-accent-indigo/10 text-accent-indigo">
+                                            <GraduationCap className="w-10 h-10" />
                                         </div>
-                                        <div className="flex-1">
-                                            <h3 className="text-xl font-bold text-slate-900 mb-1">{edu.degree}</h3>
-                                            <p className="text-blue-600 font-semibold">{edu.field}</p>
+                                        <div>
+                                            <h3 className="text-2xl font-black text-white group-hover:gradient-text transition-all">{edu.degree}</h3>
+                                            <p className="text-slate-400 font-bold flex items-center gap-2 mt-1">
+                                                {edu.institution}
+                                            </p>
                                         </div>
                                     </div>
+                                    <div className="px-5 py-2 glass rounded-2xl text-accent-cyan font-mono text-sm font-bold border border-accent-cyan/20">
+                                        {edu.period}
+                                    </div>
+                                </div>
 
-                                    <div className="space-y-3">
-                                        <div className="flex items-start gap-2">
-                                            <GraduationCap className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />
-                                            <span className="text-slate-700 font-medium">{edu.institution}</span>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/5">
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-3 text-slate-300">
+                                            <MapPin className="w-5 h-5 text-accent-indigo" />
+                                            <span className="font-medium">{edu.location}</span>
                                         </div>
-                                        <div className="flex items-start gap-2">
-                                            <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                                            <span className="text-slate-600">{edu.location}</span>
+                                        <div className="flex items-center gap-3 text-slate-300">
+                                            <Award className="w-5 h-5 text-accent-cyan" />
+                                            <span className="font-bold tracking-wider">{edu.grade} Graduation Grade</span>
                                         </div>
-                                        <div className="flex items-center gap-6">
-                                            <div className="flex items-center gap-2">
-                                                <Calendar className="w-5 h-5 text-cyan-600" />
-                                                <span className="text-slate-600">{edu.period}</span>
-                                            </div>
-                                            <div className="px-4 py-2 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border border-blue-200">
-                                                <span className="text-blue-700 font-semibold">{edu.grade}</span>
-                                            </div>
-                                        </div>
+                                    </div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {edu.highlights.map((h, idx) => (
+                                            <span key={idx} className="px-4 py-2 bg-white/5 rounded-xl text-xs font-mono text-slate-400 uppercase tracking-widest">
+                                                {h}
+                                            </span>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
-                        );
-                    })}
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="bg-white rounded-2xl shadow-lg p-8 border border-slate-100">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="p-3 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl shadow-lg">
-                                <Award className="w-6 h-6 text-white" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-slate-900">Certifications</h3>
-                        </div>
-
-                        <div className="space-y-4">
-                            {certifications.map((cert, index) => (
-                                <div
-                                    key={index}
-                                    className="p-4 bg-gradient-to-r from-slate-50 to-white rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all"
-                                >
-                                    <div className="flex items-start justify-between mb-2">
-                                        <h4 className="font-semibold text-slate-900">{cert.title}</h4>
-                                        <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
-                                            {cert.platform}
-                                        </span>
-                                    </div>
-                                    <p className="text-sm text-slate-600">{cert.description}</p>
-                                </div>
-                            ))}
-                        </div>
+                        ))}
                     </div>
 
-                    <div className="bg-white rounded-2xl shadow-lg p-8 border border-slate-100">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="p-3 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-xl shadow-lg">
-                                <BookOpen className="w-6 h-6 text-white" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-slate-900">Areas of Interest</h3>
-                        </div>
-
-                        <div className="flex flex-wrap gap-3">
-                            {interests.map((interest, index) => (
-                                <div
-                                    key={index}
-                                    className="px-5 py-3 bg-gradient-to-r from-blue-50 to-cyan-50 text-slate-700 font-medium rounded-xl border border-blue-200 hover:border-blue-400 hover:shadow-md transition-all"
-                                >
-                                    {interest}
+                    {/* Certifications Sidebar */}
+                    <div className="space-y-6">
+                        <div className="glass-card p-8 h-full flex flex-col">
+                            <div className="flex items-center gap-3 mb-8">
+                                <div className="p-3 glass rounded-xl text-accent-violet">
+                                    <BookOpen className="w-6 h-6" />
                                 </div>
-                            ))}
-                        </div>
+                                <h3 className="text-xl font-black text-white">Certifications</h3>
+                            </div>
+                            
+                            <div className="space-y-4 flex-1">
+                                {certifications.map((cert, i) => (
+                                    <div key={i} className="p-5 glass-strong border border-white/5 rounded-2xl group hover:border-accent-violet/30 transition-all">
+                                        <div className="flex items-start justify-between mb-2">
+                                            <h4 className="font-bold text-slate-200 group-hover:text-white transition-colors">{cert.title}</h4>
+                                            <Star className="w-4 h-4 text-accent-violet fill-accent-violet/20" />
+                                        </div>
+                                        <div className="text-xs font-mono text-slate-500 uppercase tracking-widest">{cert.platform} Verified</div>
+                                    </div>
+                                ))}
+                            </div>
 
-                        <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
-                            <h4 className="font-semibold text-slate-900 mb-2">Continuous Learning</h4>
-                            <p className="text-slate-600 text-sm leading-relaxed">
-                                Passionate about staying current with the latest technologies and best practices in
-                                software development. Regularly exploring new frameworks, tools, and methodologies to
-                                deliver cutting-edge solutions.
-                            </p>
+                            <div className="mt-8 p-6 glass rounded-2xl bg-accent-indigo/5 border border-accent-indigo/10">
+                                <p className="text-xs text-slate-400 leading-relaxed italic">
+                                    "Committed to lifelong learning and staying at the forefront of the Full-Stack and AI revolution."
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,116 +1,124 @@
 import React from 'react';
-import { Code, Server, Database, GitBranch, Layers, Cloud, Brain } from 'lucide-react';
+import { 
+    Layers, Smartphone, Layout, Server, 
+    Database, Cloud, Shield, Wrench, Brain 
+} from 'lucide-react';
 
 const About: React.FC = () => {
     const skillCategories = [
         {
-            title: 'Frontend Development',
-            icon: Code,
-            color: 'from-blue-500 to-cyan-500',
-            skills: ['Flutter', 'React.js', 'Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Next.js'],
+            title: 'Architecture',
+            icon: Layers,
+            skills: ['Microservices', 'Clean Architecture', 'SOLID', 'MVVM', 'Repository Pattern', 'API Gateway'],
+            color: 'text-accent-indigo'
         },
         {
-            title: 'Backend Development',
+            title: 'Mobile & Desktop',
+            icon: Smartphone,
+            skills: ['Flutter', 'Android Studio', 'Xcode', 'App Store Deployment'],
+            color: 'text-accent-cyan'
+        },
+        {
+            title: 'Frontend',
+            icon: Layout,
+            skills: ['React.js', 'Angular', 'TypeScript', 'Tailwind CSS', 'Figma'],
+            color: 'text-accent-violet'
+        },
+        {
+            title: 'Backend',
             icon: Server,
-            color: 'from-cyan-500 to-blue-500',
-            skills: ['ASP.NET Web API', 'Node.js', 'Nest.js', 'Express.js', 'RESTful APIs'],
+            skills: ['ASP.NET Core', 'Node.js', 'NestJS', 'Express.js', 'REST APIs'],
+            color: 'text-accent-indigo'
         },
         {
-            title: 'Cloud & Infrastructure',
-            icon: Cloud,
-            color: 'from-blue-600 to-cyan-600',
-            skills: ['Git', 'GitHub', 'Azure Deveops', 'Aws Ec2', 'vercel', 'netlify', 'docker', 'render', 'firebase'],
+            title: 'State Management',
+            icon: Shield,
+            skills: ['BLoC', 'Signals', 'GetX', 'Provider', 'Riverpod', 'Redux', 'RxJS'],
+            color: 'text-accent-cyan'
         },
         {
-            title: 'Database',
+            title: 'Databases',
             icon: Database,
-            color: 'from-cyan-600 to-blue-600',
-            skills: ['MySQL', 'SQL Server', 'MongoDB', 'SQLite', 'Entity Framework', 'Mongoose', 'redis'],
+            skills: ['SQL Server', 'MySQL', 'MongoDB', 'Redis', 'Dapper', 'EF Core'],
+            color: 'text-accent-violet'
+        },
+        {
+            title: 'Cloud & DevOps',
+            icon: Cloud,
+            skills: ['Azure DevOps', 'AWS EC2', 'Docker', 'CI/CD', 'GitHub Actions'],
+            color: 'text-accent-indigo'
+        },
+        {
+            title: 'AI & Agentic',
+            icon: Brain,
+            skills: ['Antigravity', 'Gemini', 'Prompt Engineering', 'GitHub Copilot', 'ChatGPT'],
+            color: 'text-accent-cyan'
         },
         {
             title: 'Tools',
-            icon: GitBranch,
-            color: 'from-blue-500 to-cyan-500',
-            skills: ['Postman', 'Swagger', 'Figma', 'vs code', 'Android Studio', 'Xcode', 'IIs Manager'],
-        },
-        {
-            title: 'Integrations',
-            icon: Layers,
-            color: 'from-cyan-500 to-blue-500',
-            skills: ['Firebase', 'Google Maps API', 'Razorpay', 'OAuth2', 'JWT', 'Microsoft Auth'],
-        },
-        {
-            title: 'AI Tools',
-            icon: Brain,
-            color: 'from-cyan-500 to-blue-500',
-            skills: ['Gemini', 'ChatGPT', 'Copilot', 'Antigravity', 'Claude', 'DeepSeek', 'Github Copilot', 'Stich', 'Cursor', 'Perplexity', 'Google AI Studio'],
-        },
+            icon: Wrench,
+            skills: ['Git', 'Agile/Scrum', 'Postman', 'Swagger', 'Visual Studio'],
+            color: 'text-accent-violet'
+        }
     ];
 
     return (
-        <section id="about" className="py-24 bg-slate-50 relative overflow-hidden">
-            {/* Background elements */}
-            <div className="absolute top-1/4 -right-20 w-80 h-80 bg-blue-100/50 rounded-full blur-[100px] -z-10"></div>
-            <div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-cyan-100/50 rounded-full blur-[100px] -z-10"></div>
+        <section id="about" className="py-32 relative overflow-hidden bg-surface-secondary/30">
+            {/* Ambient Background Lights */}
+            <div className="absolute top-1/4 -right-64 w-[500px] h-[500px] bg-accent-indigo/5 rounded-full blur-[120px]"></div>
+            <div className="absolute bottom-1/4 -left-64 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[120px]"></div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center space-y-4 mb-20 animate-fade-in">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">About Me</h2>
-                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="flex flex-col items-center text-center mb-24 space-y-4">
+                    <h2 className="text-4xl sm:text-6xl font-black text-white">Technical Arsenal</h2>
+                    <div className="section-line"></div>
+                    <p className="text-slate-400 max-w-2xl text-lg font-medium">
+                        Specializing in <span className="text-white">Full-Stack Ecosystems</span> and <span className="text-white">High-Performance Architectures</span>.
+                    </p>
                 </div>
 
-                <div className="max-w-4xl mx-auto mb-20 animate-fade-in delay-100">
-                    <div className="glass p-8 sm:p-10 rounded-3xl text-center shadow-blue-500/5">
-                        <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
-                            As a <span className="text-blue-600"> Cross Platform Full Stack Developer</span> with around 3 years of hands-on experience, I specialize in
-                            building cross-platform applications for Android, iOS, Desktop,Mac and Web. I focus on creating
-                            scalable, high-performance solutions with exceptional user experiences.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {skillCategories.map((category, index) => {
-                        const Icon = category.icon;
-                        return (
-                            <div
-                                key={index}
-                                className={`group glass p-8 rounded-3xl animate-fade-in transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 border-white/40 shadow-blue-500/5`}
-                                style={{ animationDelay: `${(index + 2) * 100}ms` }}
-                            >
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className={`p-4 bg-gradient-to-br ${category.color} rounded-2xl shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform duration-500`}>
-                                        <Icon className="w-6 h-6 text-white" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-slate-900">{category.title}</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {skillCategories.map((cat, i) => (
+                        <div 
+                            key={i} 
+                            className="glass-card p-8 group relative overflow-hidden"
+                        >
+                            {/* Card Background Glow */}
+                            <div className="absolute -right-4 -top-4 w-24 h-24 bg-white/5 blur-2xl rounded-full group-hover:bg-accent-indigo/10 transition-all duration-500"></div>
+                            
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className={`p-3 glass rounded-xl ${cat.color} group-hover:scale-110 transition-transform`}>
+                                    <cat.icon className="w-6 h-6" />
                                 </div>
-                                <div className="flex flex-wrap gap-2">
-                                    {category.skills.map((skill, skillIndex) => (
-                                        <span
-                                            key={skillIndex}
-                                            className="px-3 py-1.5 bg-white/50 backdrop-blur-sm text-slate-700 text-sm font-semibold rounded-xl border border-slate-200 hover:border-blue-400 hover:text-blue-600 hover:bg-white transition-all duration-300"
-                                        >
-                                            {skill}
-                                        </span>
-                                    ))}
-                                </div>
+                                <h3 className="text-xl font-bold text-white tracking-tight">{cat.title}</h3>
                             </div>
-                        );
-                    })}
+
+                            <div className="flex flex-wrap gap-2">
+                                {cat.skills.map((skill, idx) => (
+                                    <span 
+                                        key={idx}
+                                        className="px-3 py-1 text-xs font-mono font-medium text-slate-400 bg-white/5 border border-white/5 rounded-full group-hover:border-white/10 group-hover:text-slate-200 transition-colors"
+                                    >
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
-                <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in delay-300">
+                {/* Core Stats / Summary */}
+                <div className="mt-24 grid grid-cols-2 lg:grid-cols-4 gap-6">
                     {[
-                        { label: 'Experience', value: '3 Years' },
-                        { label: 'Projects', value: '6+' },
-                        { label: 'Technologies', value: '10+' },
-                        { label: 'Dedication', value: '100%' },
+                        { label: 'Latency Reduced', value: '35%', sub: 'SQL Optimization' },
+                        { label: 'Uptime', value: '99.9%', sub: 'Cloud Deployments' },
+                        { label: 'Data Integrity', value: '100%', sub: 'Offline-First Sync' },
+                        { label: 'System Scalability', value: '2k+', sub: 'Active Records' },
                     ].map((stat, i) => (
-                        <div key={i} className="text-center p-6 rounded-2xl glass shadow-blue-500/5 transition-transform hover:scale-105 duration-300">
-                            <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">
-                                {stat.value}
-                            </div>
-                            <div className="text-slate-500 font-semibold text-sm uppercase tracking-wider">{stat.label}</div>
+                        <div key={i} className="p-8 glass-strong rounded-3xl text-center hover:bg-white/[0.02] transition-colors border border-white/5">
+                            <div className="text-4xl font-black gradient-text-cyan mb-2">{stat.value}</div>
+                            <div className="text-sm font-bold text-slate-200 uppercase tracking-widest mb-1">{stat.label}</div>
+                            <div className="text-xs font-medium text-slate-500 font-mono">{stat.sub}</div>
                         </div>
                     ))}
                 </div>

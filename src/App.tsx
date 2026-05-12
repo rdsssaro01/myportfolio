@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'about', 'experience', 'projects', 'education', 'contact'];
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 150;
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
+    <div className="noise-overlay min-h-screen bg-surface-primary text-slate-100 relative">
       <Navigation activeSection={activeSection} />
       <Hero />
       <About />

@@ -1,183 +1,159 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, Send, FileUser } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Send, Download, Heart } from 'lucide-react';
 
 const Contact: React.FC = () => {
     const contactInfo = [
         {
             icon: Mail,
-            label: 'Email',
+            label: 'Direct Email',
             value: 'saravananrajdev@gmail.com',
             href: 'mailto:saravananrajdev@gmail.com',
-            color: 'from-blue-600 to-cyan-600',
+            color: 'text-accent-indigo'
         },
         {
             icon: Phone,
-            label: 'Phone',
+            label: 'Call Me',
             value: '+91 7373991335',
             href: 'tel:+917373991335',
-            color: 'from-cyan-600 to-blue-600',
+            color: 'text-accent-cyan'
         },
         {
             icon: MapPin,
-            label: 'Location',
-            value: 'Chennai, Tamil Nadu',
+            label: 'Current Base',
+            value: 'Pudukkottai, Tamil Nadu',
             href: null,
-            color: 'from-blue-600 to-cyan-600',
-        },
+            color: 'text-accent-violet'
+        }
     ];
 
-    const socialLinks = [
+    const socials = [
         {
             icon: Linkedin,
             label: 'LinkedIn',
-            href: 'https://www.linkedin.com/in/saravananr007/',
-            color: 'hover:text-blue-600',
-            bgColor: 'hover:bg-blue-50',
+            href: 'https://linkedin.com/in/r--saravanan',
+            sub: 'Professional Network'
         },
         {
             icon: Github,
             label: 'GitHub',
-            href: 'https://github.com/rdsssaro01?tab=repositories',
-            color: 'hover:text-slate-900',
-            bgColor: 'hover:bg-slate-100',
-        },
-
-
-        {
-            icon: FileUser,
-            label: 'Resume',
-            href: './Saravanan R Full Stack Developer.pdf',
-            color: 'hover:text-slate-900',
-            bgColor: 'hover:bg-slate-100',
+            href: 'https://github.com/rdsssaro01',
+            sub: 'Code Repositories'
         }
     ];
 
     return (
-        <section id="contact" className="py-24 bg-slate-50 relative overflow-hidden">
+        <section id="contact" className="py-32 relative overflow-hidden bg-surface-primary">
             {/* Background elements */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/30 rounded-full blur-[120px] -z-10"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100/30 rounded-full blur-[120px] -z-10"></div>
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-indigo/5 rounded-full blur-[120px] -z-10"></div>
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent-cyan/5 rounded-full blur-[120px] -z-10"></div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center space-y-4 mb-20 animate-fade-in">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">Get In Touch</h2>
-                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto font-medium">
-                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="flex flex-col items-center text-center mb-24 space-y-4">
+                    <h2 className="text-4xl sm:text-6xl font-black text-white">Let's Build Together</h2>
+                    <div className="section-line"></div>
+                    <p className="text-slate-400 max-w-2xl text-lg font-medium">
+                        Open for <span className="text-white">Full-Stack Opportunities</span>, Architecting Scalable Systems, and <span className="text-white">AI-Driven Solutions</span>.
                     </p>
                 </div>
 
-                <div className="max-w-5xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 px-max">
-                        {contactInfo.map((item, index) => {
-                            const Icon = item.icon;
-                            const content = (
-                                <div className="space-y-4 h-full">
-                                    <div className={`p-4 bg-gradient-to-br ${item.color} rounded-2xl shadow-lg shadow-blue-500/20 mx-auto w-fit group-hover:scale-110 transition-transform duration-500`}>
-                                        <Icon className="w-7 h-7 text-white" />
-                                    </div>
-                                    <div className="space-y-1">
-                                        <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                                            {item.label}
-                                        </h3>
-                                        <p className="text-slate-900 font-bold text-sm sm:text-base break-words">{item.value}</p>
-                                    </div>
-                                </div>
-                            );
-
-                            return item.href ? (
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        {/* Left Side: Contact Cards */}
+                        <div className="space-y-6">
+                            {contactInfo.map((item, i) => (
                                 <a
-                                    key={index}
-                                    href={item.href}
-                                    className="group glass p-8 rounded-3xl animate-fade-in transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 border-white/40 shadow-blue-500/5 text-center flex flex-col justify-center"
-                                    style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                                    key={i}
+                                    href={item.href || '#'}
+                                    className={`glass-card p-8 flex items-center gap-6 group hover:border-white/20 transition-all ${!item.href && 'cursor-default'}`}
                                 >
-                                    {content}
+                                    <div className={`p-4 glass rounded-2xl ${item.color} group-hover:scale-110 transition-transform duration-500`}>
+                                        <item.icon className="w-6 h-6" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">{item.label}</p>
+                                        <p className="text-lg font-bold text-white group-hover:text-accent-cyan transition-colors">{item.value}</p>
+                                    </div>
                                 </a>
-                            ) : (
-                                <div
-                                    key={index}
-                                    className="group glass p-8 rounded-3xl animate-fade-in transition-all duration-500 border-white/40 shadow-blue-500/5 text-center flex flex-col justify-center"
-                                    style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                                >
-                                    {content}
+                            ))}
+
+                            <div className="pt-8">
+                                <h3 className="text-sm font-black uppercase tracking-[0.3em] text-slate-600 mb-6 px-2">Digital Presence</h3>
+                                <div className="grid grid-cols-2 gap-4">
+                                    {socials.map((social, i) => (
+                                        <a
+                                            key={i}
+                                            href={social.href}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="glass-strong p-6 rounded-3xl border border-white/5 hover:border-accent-indigo/30 hover:bg-white/[0.02] transition-all group"
+                                        >
+                                            <social.icon className="w-6 h-6 text-slate-400 group-hover:text-white mb-4 transition-colors" />
+                                            <p className="text-sm font-black text-white">{social.label}</p>
+                                            <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mt-1">{social.sub}</p>
+                                        </a>
+                                    ))}
                                 </div>
-                            );
-                        })}
-                    </div>
-
-                    <div className="glass rounded-[40px] shadow-2xl shadow-blue-500/5 p-8 md:p-16 border-white/60 relative overflow-hidden animate-fade-in delay-300">
-                        {/* Inner decoration */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl -z-10 -mr-32 -mt-32"></div>
-
-                        <div className="text-center mb-12 relative z-10">
-                            <h3 className="text-3xl font-bold text-slate-900 mb-4">Let's Connect</h3>
-                            <p className="text-slate-600 font-medium max-w-lg mx-auto leading-relaxed">
-                                Feel free to reach out through email or connect with me on social media. I usually respond within 24 hours.
-                            </p>
-                        </div>
-
-                        <div className="flex flex-wrap justify-center gap-4 mb-12 relative z-10">
-                            {socialLinks.map((social, index) => {
-                                const Icon = social.icon;
-                                return (
-                                    <a
-                                        key={index}
-                                        href={social.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={`flex items-center gap-3 px-8 py-4 bg-white/50 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:border-blue-400 group`}
-                                    >
-                                        <Icon className={`w-6 h-6 text-slate-400 group-hover:text-blue-600 transition-all`} />
-                                        <span className="font-bold text-slate-700 group-hover:text-blue-600 transition-all">{social.label}</span>
-                                    </a>
-                                );
-                            })}
-                        </div>
-
-                        <div className="text-center relative z-10">
-                            <a
-                                href="mailto:saravananrajdev@gmail.com"
-                                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-2xl shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300 active:scale-95"
-                            >
-                                <Send className="w-5 h-5 animate-pulse" />
-                                Send Message
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="mt-16 text-center animate-fade-in delay-500">
-                        <div className="inline-flex flex-wrap justify-center gap-4 p-8 glass rounded-[32px] border-white/40 shadow-blue-500/5">
-                            <div className="flex items-center gap-2 px-5 py-2.5 bg-green-50 text-green-700 rounded-2xl border border-green-100 font-bold text-sm">
-                                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                                Open to Work
                             </div>
-                            <div className="px-5 py-2.5 bg-blue-50 text-blue-700 rounded-2xl border border-blue-100 font-bold text-sm">
-                                Remote Available
+                        </div>
+
+                        {/* Right Side: CTA Card */}
+                        <div className="glass-card p-12 flex flex-col justify-between relative overflow-hidden">
+                            <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-accent-cyan/10 blur-[80px] rounded-full"></div>
+
+                            <div className="relative z-10">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-xl text-green-400 font-mono text-[10px] font-black uppercase tracking-widest mb-8">
+                                    <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                                    Immediate Joiner Available
+                                </div>
+
+                                <h3 className="text-4xl font-black text-white mb-6 leading-tight">
+                                    Ready to elevate your next <span className="gradient-text">Enterprise Application?</span>
+                                </h3>
+                                <p className="text-slate-400 text-lg leading-relaxed mb-12">
+                                    Bringing expertise in Flutter mobile solutions, Angular web apps, and .NET/Node.js backend architectures. Let's discuss how I can add value to your team.
+                                </p>
                             </div>
-                            <div className="px-5 py-2.5 bg-indigo-50 text-indigo-700 rounded-2xl border border-indigo-100 font-bold text-sm">
-                                Specialized in Flutter
+
+                            <div className="flex flex-col sm:flex-row gap-4 relative z-10">
+                                <a
+                                    href="mailto:saravananrajdev@gmail.com"
+                                    className="flex-1 px-8 py-5 bg-white text-black font-black rounded-2xl flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-white/5"
+                                >
+                                    <Send className="w-5 h-5" />
+                                    Send Message
+                                </a>
+                                <button className="px-8 py-5 glass-strong text-white font-black rounded-2xl flex items-center justify-center gap-3 hover:bg-white/5 hover:scale-[1.02] active:scale-95 transition-all border border-white/10">
+                                    <Download className="w-5 h-5 text-accent-cyan" />
+                                    Resume PDF
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                {/* Footer */}
+                <footer className="mt-40 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div className="flex items-center gap-4">
+
+                        <div>
+                            <p className="text-white font-bold tracking-tight text-sm">SARAVANAN R</p>
+                            <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Full Stack Developer © 2026</p>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 px-5 py-2 glass rounded-full">
+                        <span className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-widest">Crafted with</span>
+                        <Heart className="w-3 h-3 text-rose-500 fill-rose-500/20" />
+                        <span className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-widest">using React & Tailwind</span>
+                    </div>
+
+                    <div className="flex gap-8">
+                        {['Privacy', 'Cookies', 'Terms'].map(link => (
+                            <button key={link} className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-600 hover:text-white transition-colors">{link}</button>
+                        ))}
+                    </div>
+                </footer>
             </div>
-
-            <footer className="mt-24 pb-12 pt-8 border-t border-slate-200 relative z-10">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-slate-500 font-medium order-2 md:order-1">
-                        © 2025 <span className="text-slate-900 font-bold">Saravanan R</span>. All Rights Reserved.
-                    </p>
-                    <div className="flex items-center gap-4 text-slate-400 order-1 md:order-2">
-                        <span className="text-xs font-bold uppercase tracking-widest">Built with</span>
-                        <div className="flex gap-4">
-                            <span className="text-sm font-bold text-slate-600">React</span>
-                            <span className="text-sm font-bold text-slate-600">TypeScript</span>
-                            <span className="text-sm font-bold text-slate-600">Tailwind</span>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </section>
     );
 };

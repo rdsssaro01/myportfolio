@@ -1,169 +1,116 @@
 import React from 'react';
-import { Ship, Car, Heart, Radio, Briefcase, Calendar } from 'lucide-react';
+import { Ship, Heart, Briefcase, Radio, Github, Box, ArrowUpRight } from 'lucide-react';
 
 const Projects: React.FC = () => {
     const projects = [
         {
-            title: 'VIR - Ship Inspection App',
-            period: 'Apr 2025 - Present',
+            title: 'VIR - Maritime Inspection',
+            type: 'Enterprise Ecosystem',
             icon: Ship,
-            color: 'from-blue-600 to-cyan-600',
-            description: 'Cross-platform app for digitizing ship inspections with offline capabilities',
-            highlights: [
-                'Offline inspections with SQLite database',
-                'Photo and data capture system',
-                'Automated checklist management',
-                'Cloud synchronization',
-            ],
-            tech: ['Flutter', 'Angular', 'GetX', 'SQLite', 'Node.js', 'sql Server', 'StoreProcedures'],
-            platforms: ['Android', 'iOS', 'Desktop'],
+            description: 'High-performance distributed system with 100% data integrity for 2,000+ media assets in zero-connectivity maritime environments.',
+            highlights: ['Offline-First Sync Engine', 'SQL Stored Procedure Tuning', 'Lazy-Loading Optimization'],
+            tech: ['Node.js', 'TypeORM', 'Angular', 'Flutter', 'SQLite', 'BLoC'],
+            color: 'from-blue-600 to-cyan-500'
         },
-
         {
-            title: 'ARDOM - Telecom Site Inspection',
-            period: 'Jan 2025 - March 2025',
-            icon: Radio,
-            color: 'from-cyan-600 to-blue-600',
-            description: 'Offline-first inspection app for telecom infrastructure',
-            highlights: [
-                'Asset condition verification',
-                'Photo capture and documentation',
-                'Survey workflow automation',
-                'REST API with Azure deployment',
-                'ObjectBox local database',
-            ],
-            tech: ['Flutter', 'BLoc(Cubit)', 'ObjectBox', 'Node.js', 'MySQL', 'Figma', 'RESTful APIs', 'Google Maps API', 'React'],
-            platforms: ['Android', 'iOS'],
-        },
-
-        {
-            title: 'Healthcare Logistics Suite',
-            period: 'Nov 2023 - Jan 2025',
+            title: 'LIMS - Healthcare & Logistics',
+            type: 'Workflow Automation',
             icon: Heart,
-            color: 'from-blue-600 to-cyan-600',
-            description: 'A unified digital healthcare ecosystem connecting patients, doctors, and logistics for seamless care delivery ',
-            highlights: [
-                'Doctor booking and appointment management',
-                'Report validation and downloads',
-                'Home sample collection',
-                'Real-time carrier tracking',
-                'Secure payment processing',
-            ],
-            tech: ['ASP.NET Core', 'Flutter', 'Angular', 'Figma', 'GetX', 'Riverpod', '.NET Web API', 'Razorpay', 'Sql Server', 'Google Maps API', 'StoreProcedures'],
-            platforms: ['Android', 'iOS'],
+            description: '4-tier ecosystem reducing Lab Turnaround Time (TAT) by 15% via automated workflow transitions and real-time tracking.',
+            highlights: ['ASP.NET Web API', 'EF Core Optimization', 'Firebase Cloud Messaging'],
+            tech: ['.NET Core', 'SQL Server', 'MongoDB', 'Angular', 'Riverpod'],
+            color: 'from-rose-600 to-orange-500'
         },
-        {
-            title: 'PayPark - Smart Parking Ecosystem',
-            period: 'Feb 2024 - April 2024',
-            icon: Car,
-            color: 'from-cyan-600 to-blue-600',
-            description: 'Complete parking management system with three specialized applications',
-            highlights: [
-                'User, Owner, and Admin applications',
-                'Parking slot reservations',
-                'Razorpay payment integration',
-                'Google Maps API integration',
-            ],
-            tech: ['Flutter', 'Dart', 'Figma', 'Razorpay', 'Google Maps API', 'Provider', 'Node.js', 'sql Server', 'StoreProcedures'],
-            platforms: ['Android', 'iOS'],
-        },
-
         {
             title: 'Prodigious - HRMS & Payroll',
-            period: 'Aug 2023 - Jan 2024',
+            type: 'Automation Engine',
             icon: Briefcase,
-            color: 'from-blue-600 to-cyan-600',
-            description: 'Complete HR management system with payroll integration',
-            highlights: [
-                'Employee management system',
-                'Attendance tracking',
-                'Payroll processing',
-                'Reporting and analytics',
-                'Google Maps integration',
-            ],
-            tech: ['Flutter', 'ASP.NET Core', 'GetX', 'Provider', 'Hive', 'Google Maps API'],
-            platforms: ['Android', 'iOS'],
+            description: 'Precision payroll engine automating leave encashment and tax calculations, saving HR teams 30+ hours/week.',
+            highlights: ['Dapper SQL Performance', 'GPS Geo-fencing', 'Dynamic PDF Generation'],
+            tech: ['.NET Core', 'SQL Server', 'Flutter', 'GetX', 'Hive'],
+            color: 'from-indigo-600 to-violet-500'
         },
+        {
+            title: 'ARDOM - Telecom Asset Inspection',
+            type: 'Field Survey Solution',
+            icon: Radio,
+            description: '10x faster write speeds via ObjectBox indexing. Improved sync success rates by 45% using exponential backoff logic.',
+            highlights: ['ObjectBox NoSQL', 'S3 Multi-threaded Streams', 'Conflict Resolution Strategy'],
+            tech: ['Node.js', 'MySQL', 'React.js', 'Flutter', 'BLoC'],
+            color: 'from-cyan-600 to-emerald-500'
+        }
     ];
 
     return (
-        <section id="projects" className="py-20 bg-white">
+        <section id="projects" className="py-32 bg-surface-secondary/50 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center space-y-4 mb-16">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">Featured Projects</h2>
-                    <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full"></div>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        A showcase of my recent work in mobile, web, and desktop application development
+                <div className="flex flex-col items-center text-center mb-24 space-y-4">
+                    <h2 className="text-4xl sm:text-6xl font-black text-white">Impactful Projects</h2>
+                    <div className="section-line"></div>
+                    <p className="text-slate-400 max-w-2xl text-lg font-medium">
+                        A selection of <span className="text-white">Enterprise Solutions</span> built with focus on speed, reliability, and UX.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {projects.map((project, index) => {
-                        const Icon = project.icon;
-                        return (
-                            <div
-                                key={index}
-                                className="group bg-gradient-to-br from-slate-50 to-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 overflow-hidden hover:-translate-y-1"
-                            >
-                                <div className={`h-2 bg-gradient-to-r ${project.color}`}></div>
-
-                                <div className="p-8">
-                                    <div className="flex items-start justify-between mb-4">
-                                        <div className={`p-4 bg-gradient-to-br ${project.color} rounded-xl shadow-lg group-hover:scale-110 transition-transform`}>
-                                            <Icon className="w-8 h-8 text-white" />
-                                        </div>
-                                        <div className="flex items-center gap-2 text-sm text-slate-500">
-                                            <Calendar className="w-4 h-4" />
-                                            <span>{project.period}</span>
-                                        </div>
+                    {projects.map((proj, i) => (
+                        <div key={i} className="group glass-card overflow-hidden flex flex-col sm:flex-row h-full">
+                            {/* Left Side: Visual/Color Accent */}
+                            <div className={`sm:w-2 bg-gradient-to-b ${proj.color} group-hover:w-4 transition-all duration-500`}></div>
+                            
+                            <div className="p-8 flex-1 flex flex-col">
+                                <div className="flex justify-between items-start mb-6">
+                                    <div className={`p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform duration-500`}>
+                                        <proj.icon className="w-8 h-8 text-white" />
                                     </div>
-
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-2">{project.title}</h3>
-                                    <p className="text-slate-600 mb-4 leading-relaxed">{project.description}</p>
-
-                                    <div className="mb-4">
-                                        <h4 className="text-sm font-semibold text-slate-700 mb-2">Key Features:</h4>
-                                        <ul className="space-y-1.5">
-                                            {project.highlights.map((highlight, idx) => (
-                                                <li key={idx} className="text-sm text-slate-600 flex items-start gap-2">
-                                                    <span className="text-blue-600 mt-1">•</span>
-                                                    <span>{highlight}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-
-                                    <div className="mb-4">
-                                        <h4 className="text-sm font-semibold text-slate-700 mb-2">Platforms:</h4>
-                                        <div className="flex flex-wrap gap-2">
-                                            {project.platforms.map((platform, idx) => (
-                                                <span
-                                                    key={idx}
-                                                    className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full border border-blue-200"
-                                                >
-                                                    {platform}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <h4 className="text-sm font-semibold text-slate-700 mb-2">Technologies:</h4>
-                                        <div className="flex flex-wrap gap-2">
-                                            {project.tech.map((tech, idx) => (
-                                                <span
-                                                    key={idx}
-                                                    className="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-lg hover:bg-slate-200 transition-colors"
-                                                >
-                                                    {tech}
-                                                </span>
-                                            ))}
-                                        </div>
+                                    <div className="flex gap-2">
+                                        <button className="p-2 glass rounded-lg hover:text-accent-cyan transition-colors">
+                                            <Github className="w-5 h-5" />
+                                        </button>
+                                        <button className="p-2 glass rounded-lg hover:text-accent-cyan transition-colors">
+                                            <ArrowUpRight className="w-5 h-5" />
+                                        </button>
                                     </div>
                                 </div>
+
+                                <div className="space-y-2 mb-6">
+                                    <div className="text-xs font-black uppercase tracking-[0.2em] text-accent-cyan">{proj.type}</div>
+                                    <h3 className="text-2xl font-black text-white group-hover:gradient-text transition-all duration-300">
+                                        {proj.title}
+                                    </h3>
+                                    <p className="text-slate-400 text-sm leading-relaxed">
+                                        {proj.description}
+                                    </p>
+                                </div>
+
+                                <div className="space-y-4 mb-8">
+                                    <div className="flex flex-wrap gap-2">
+                                        {proj.highlights.map((h, idx) => (
+                                            <div key={idx} className="flex items-center gap-1.5 px-3 py-1 glass rounded-full text-[10px] font-bold text-slate-300 uppercase tracking-wider">
+                                                <Box className="w-3 h-3 text-accent-indigo" />
+                                                {h}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="mt-auto pt-6 border-t border-white/5 flex flex-wrap gap-2">
+                                    {proj.tech.map((t, idx) => (
+                                        <span key={idx} className="text-[11px] font-mono font-medium text-slate-500 uppercase group-hover:text-slate-300">
+                                            #{t}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
-                        );
-                    })}
+                        </div>
+                    ))}
+                </div>
+                
+                <div className="mt-20 text-center">
+                    <a href="https://github.com/rdsssaro01" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 px-8 py-4 glass-strong rounded-2xl text-white font-bold hover:bg-white/5 transition-all group">
+                        Explore Full Repository
+                        <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </a>
                 </div>
             </div>
         </section>

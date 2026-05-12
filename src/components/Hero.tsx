@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Database, Globe, ChevronDown } from 'lucide-react';
+import { ChevronDown, Terminal, Sparkles, Cpu } from 'lucide-react';
 
 const Hero: React.FC = () => {
     const scrollToAbout = () => {
@@ -10,67 +10,78 @@ const Hero: React.FC = () => {
     };
 
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center relative pt-20">
-            <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            </div>
+        <section id="home" className="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden dot-grid">
+            {/* Background Mesh Gradients */}
+            <div className="mesh-gradient-1 top-0 -left-48 animate-gradient-shift"></div>
+            <div className="mesh-gradient-2 bottom-0 -right-48 animate-gradient-shift"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="text-center space-y-8">
-                    <div className="space-y-4 animate-fade-in">
-                        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900">
-                            <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700 bg-clip-text text-transparent">
-                                SARAVANAN R
-                            </span>
+                <div className="flex flex-col items-center text-center space-y-12">
+
+                    {/* Badge */}
+                    <div className="animate-fade-in-up flex items-center gap-2 px-4 py-2 rounded-full glass-strong border border-white/10 shadow-xl shadow-black/20">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-cyan opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-cyan"></span>
+                        </span>
+                        <span className="text-xs font-mono font-medium text-slate-300 uppercase tracking-widest">
+                            Available for Immediate Join
+                        </span>
+                    </div>
+
+                    {/* Main Headlines */}
+                    <div className="space-y-6 max-w-4xl">
+                        <h1 className="animate-fade-in-up delay-100 text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-tight">
+                            <span className="text-white">SARAVANAN R</span>
+                            <br />
+                            {/* <span className="gradient-text">R</span> */}
                         </h1>
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-700">
-                            Cross Platform Full Stack Developer
+                        <h2 className="animate-fade-in-up delay-200 text-xl sm:text-2xl lg:text-3xl font-medium text-slate-400 font-mono">
+                            <span className="text-accent-indigo">&lt;</span> Full Stack Developer <span className="text-accent-indigo">/&gt;</span>
                         </h2>
                     </div>
 
-                    <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                        Building high-performance cross-platform applications with  around 3 years of expertise in
-                        Flutter, React.js, Node.js, and .NET. Specialized in creating seamless mobile, web,
-                        and desktop experiences with modern architecture.
+                    {/* Summary */}
+                    <p className="animate-fade-in-up delay-300 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                        Expert in architecting <span className="text-white font-semibold underline decoration-accent-indigo/40 decoration-2 underline-offset-4">Offline-First systems</span> for Maritime, Healthcare, and Telecom sectors. Specializing in Flutter, Angular, and .NET Core solutions.
                     </p>
 
-                    <div className="flex flex-wrap justify-center gap-4 pt-4">
-                        <div className="flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow">
-                            <Code2 className="w-5 h-5 text-cyan-600" />
-                            <span className="font-medium text-slate-700">Cross-Platform</span>
-                        </div>
-                        <div className="flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow">
-                            <Globe className="w-5 h-5 text-cyan-600" />
-                            <span className="font-medium text-slate-700">Web Development</span>
-                        </div>
-                        <div className="flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow">
-                            <Database className="w-5 h-5 text-blue-600" />
-                            <span className="font-medium text-slate-700">Backend APIs</span>
-                        </div>
-
+                    {/* Feature Chips */}
+                    <div className="animate-fade-in-up delay-400 flex flex-wrap justify-center gap-4">
+                        {[
+                            { icon: Terminal, label: '3 Years Exp', color: 'text-accent-indigo' },
+                            { icon: Cpu, label: 'Microservices', color: 'text-accent-violet' },
+                            { icon: Sparkles, label: 'AI Agentic Dev', color: 'text-accent-cyan' },
+                        ].map((chip, i) => (
+                            <div key={i} className="flex items-center gap-2 px-5 py-3 glass-card rounded-2xl">
+                                <chip.icon className={`w-5 h-5 ${chip.color}`} />
+                                <span className="font-mono text-sm font-semibold text-slate-200">{chip.label}</span>
+                            </div>
+                        ))}
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-4 pt-8">
+                    {/* Actions */}
+                    <div className="animate-fade-in-up delay-500 flex flex-wrap justify-center gap-5">
                         <a
                             href="#contact"
-                            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+                            className="px-10 py-4 bg-white text-black font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(255,255,255,0.1)]"
                         >
                             Get In Touch
                         </a>
                         <a
                             href="#projects"
-                            className="px-8 py-4 bg-white text-slate-700 font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all border-2 border-slate-200"
+                            className="px-10 py-4 glass-strong text-white font-bold rounded-2xl border border-white/10 hover:bg-white/5 hover:scale-105 active:scale-95 transition-all"
                         >
                             View Projects
                         </a>
                     </div>
 
+                    {/* Scroll Indicator */}
                     <button
                         onClick={scrollToAbout}
-                        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
+                        className="animate-float pt-12 text-slate-500 hover:text-white transition-colors"
                     >
-                        <ChevronDown className="w-8 h-8 text-slate-400" />
+                        <ChevronDown className="w-8 h-8" />
                     </button>
                 </div>
             </div>

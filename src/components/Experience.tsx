@@ -1,104 +1,105 @@
 import React from 'react';
-import { Briefcase, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle, Zap } from 'lucide-react';
 
 const Experience: React.FC = () => {
-    const experience = {
-        company: 'ClazyWorks Pvt. Ltd.',
-        role: 'Software Engineer',
-        period: '2023 - Current',
-        location: 'Chennai, TamilNadu',
-        responsibilities: [
-            'Developed and maintained cross-platform applications using Flutter and React.js for Android, iOS, Desktop, and Web',
-            'Integrated Razorpay payment gateway, Firebase services, and Google Maps API across multiple applications',
-            'Built and integrated RESTful APIs using Node.js and .NET Web API for secure communication',
-            'Designed responsive web applications using React.js, improving accessibility across devices',
-            'Implemented database solutions using Entity Framework, Mongoose, SQLite, and ObjectBox',
-            'Developed healthcare solutions with secure authentication and appointment management systems',
-            'Worked with OAuth2, JWT, and Microsoft Authentication for robust security flows',
-            'Deployed frontend and backend APIs using IIS Manager, ensuring reliable hosting, performance optimization, and seamless integration',
-            'Collaborated in Agile environment, delivering high-quality features with cross-functional teams',
-        ],
-    };
+    const experiences = [
+        {
+            company: 'ClazyWorks Technogies',
+            role: 'Software Engineer',
+            period: '07/2023 – 03/2026',
+            location: 'Chennai, Tamil Nadu',
+            highlights: [
+                {
+                    title: 'High-Performance API Architecture',
+                    details: 'Engineered Node.js and .NET RESTful APIs with sub-second latency for enterprise communication.'
+                },
+                {
+                    title: 'Enterprise Data Engineering',
+                    details: 'Designed Offline-First sync pipelines for 2,000+ media assets using SQLite/ObjectBox with 100% integrity.'
+                },
+                {
+                    title: 'Cloud & CI/CD Automation',
+                    details: 'Orchestrated pipelines via GitHub Actions and Azure DevOps, ensuring 99.9% uptime.'
+                },
+                {
+                    title: 'Security & Auth',
+                    details: 'Implemented hardened JWT, OAuth2, and RBAC to secure sensitive medical and payroll datasets.'
+                }
+            ],
+            tech: ['Flutter', '.NET 8', 'Node.js', 'Azure', 'Docker', 'SQL Indexing']
+        }
+    ];
 
     return (
-        <section id="experience" className="py-24 bg-slate-50 relative overflow-hidden">
-            {/* Background elements */}
-            <div className="absolute top-1/2 -left-40 w-96 h-96 bg-blue-100/50 rounded-full blur-[120px] -z-10"></div>
-
+        <section id="experience" className="py-32 bg-surface-primary dot-grid">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center space-y-4 mb-20 animate-fade-in">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">Work Experience</h2>
-                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+                <div className="flex flex-col items-center text-center mb-24 space-y-4">
+                    <h2 className="text-4xl sm:text-6xl font-black text-white">Career Path</h2>
+                    <div className="section-line"></div>
+                    <p className="text-slate-400 max-w-2xl text-lg font-medium">
+                        Professional journey focused on <span className="text-white">Scalable Backend Systems</span> and <span className="text-white">Robust Mobile Solutions</span>.
+                    </p>
                 </div>
 
-                <div className="max-w-4xl mx-auto">
-                    <div className="relative">
-                        {/* More subtle timeline line */}
-                        <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600/20 via-blue-600/10 to-transparent hidden md:block rounded-full"></div>
+                <div className="max-w-5xl mx-auto space-y-12">
+                    {experiences.map((exp, i) => (
+                        <div key={i} className="relative pl-8 md:pl-0">
+                            {/* Vertical Timeline Line */}
+                            <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-accent-indigo via-accent-cyan to-transparent md:left-1/2 md:-translate-x-1/2 hidden md:block"></div>
 
-                        <div className="relative animate-fade-in delay-100">
-                            <div className="md:ml-24 glass rounded-3xl transition-all duration-500 border-white/40 shadow-blue-500/5 overflow-hidden hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1">
-                                <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
-
-                                <div className="p-8 sm:p-10">
-                                    <div className="absolute -left-16 top-8 hidden md:block">
-                                        <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl shadow-xl shadow-blue-500/30 flex items-center justify-center animate-float">
-                                            <Briefcase className="w-8 h-8 text-white" />
-                                        </div>
+                            <div className="md:flex items-center gap-12 group">
+                                {/* Left Side: Company Info */}
+                                <div className="md:w-1/2 md:text-right mb-8 md:mb-0">
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-xl text-accent-cyan font-mono text-sm mb-4">
+                                        <Calendar className="w-4 h-4" />
+                                        {exp.period}
                                     </div>
+                                    <h3 className="text-3xl font-black text-white mb-1 group-hover:gradient-text transition-all duration-500">{exp.role}</h3>
+                                    <div className="flex items-center justify-start md:justify-end gap-2 text-slate-400 font-bold mb-4">
+                                        <Briefcase className="w-5 h-5 text-accent-indigo" />
+                                        <span>{exp.company}</span>
+                                        <span className="text-slate-600">|</span>
+                                        <MapPin className="w-4 h-4" />
+                                        <span className="text-sm">{exp.location}</span>
+                                    </div>
+                                    
+                                    <div className="flex flex-wrap justify-start md:justify-end gap-2">
+                                        {exp.tech.map((t, idx) => (
+                                            <span key={idx} className="px-3 py-1 bg-accent-indigo/10 border border-accent-indigo/20 text-accent-indigo rounded-lg text-xs font-bold uppercase tracking-widest">
+                                                {t}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
 
-                                    <div className="space-y-6">
-                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                                            <div>
-                                                <h3 className="text-2xl sm:text-3xl font-bold text-slate-900">{experience.role}</h3>
-                                                <h4 className="text-xl font-bold text-blue-600">{experience.company}</h4>
-                                            </div>
-                                            <div className="flex flex-wrap gap-3">
-                                                <div className="flex items-center gap-2 px-4 py-1.5 bg-blue-50 text-blue-700 rounded-xl text-sm font-bold border border-blue-100 italic">
-                                                    <Calendar className="w-4 h-4" />
-                                                    <span>{experience.period}</span>
+                                {/* Timeline Circle */}
+                                <div className="absolute left-[-13px] md:left-1/2 md:-translate-x-1/2 top-10 w-6 h-6 rounded-full bg-surface-primary border-4 border-accent-cyan z-10 shadow-[0_0_15px_rgba(6,182,212,0.5)]"></div>
+
+                                {/* Right Side: Highlights */}
+                                <div className="md:w-1/2 space-y-6">
+                                    <div className="glass-card p-8 group-hover:bg-white/[0.05]">
+                                        <h4 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                                            <Zap className="w-5 h-5 text-accent-cyan" />
+                                            Core Achievements
+                                        </h4>
+                                        <div className="space-y-6">
+                                            {exp.highlights.map((h, idx) => (
+                                                <div key={idx} className="flex gap-4">
+                                                    <div className="mt-1 flex-shrink-0">
+                                                        <CheckCircle className="w-5 h-5 text-accent-indigo" />
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-slate-100 font-bold mb-1">{h.title}</p>
+                                                        <p className="text-sm text-slate-400 leading-relaxed">{h.details}</p>
+                                                    </div>
                                                 </div>
-                                                <div className="flex items-center gap-2 px-4 py-1.5 bg-indigo-50 text-indigo-700 rounded-xl text-sm font-bold border border-indigo-100">
-                                                    <MapPin className="w-4 h-4" />
-                                                    <span>{experience.location}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="pt-2">
-                                            <h5 className="text-lg font-bold text-slate-900 mb-6 uppercase tracking-wider h-max">Key Responsibilities</h5>
-                                            <ul className="grid grid-cols-1 gap-4">
-                                                {experience.responsibilities.map((item, index) => (
-                                                    <li key={index} className="flex gap-4 group items-start">
-                                                        <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-blue-600 transition-colors">
-                                                            <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 group-hover:text-white transition-colors" />
-                                                        </div>
-                                                        <span className="text-slate-600 leading-relaxed font-medium">{item}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-
-                                        <div className="pt-6 border-t border-slate-100">
-                                            <h5 className="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest">Technologies Used</h5>
-                                            <div className="flex flex-wrap gap-2">
-                                                {['Flutter', 'React.js', 'Node.js', '.NET', 'Firebase', 'Google Maps', 'Razorpay', 'OAuth2'].map(
-                                                    (tech, index) => (
-                                                        <span
-                                                            key={index}
-                                                            className="px-4 py-2 bg-white border border-slate-200 text-slate-600 text-sm font-bold rounded-xl hover:border-blue-400 hover:text-blue-600 hover:shadow-md transition-all duration-300"
-                                                        >
-                                                            {tech}
-                                                        </span>
-                                                    )
-                                                )}
-                                            </div>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
